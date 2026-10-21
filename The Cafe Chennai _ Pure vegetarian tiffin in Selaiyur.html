@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Cafe Chennai | Pure vegetarian tiffin in Selaiyur</title>
+<meta name="description" content="Pure vegetarian South Indian tiffin, dosas and chaat in Selaiyur, Tambaram.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F7F5F0; --surface:#FFFFFF; --ink:#14201B; --muted:#5E6B64; --line:#DDD8CB;
+  --deep:#0E2B22; --deep-ink:#F2EEE3; --gold:#B08D4A; --gold-soft:#D9BF86;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0B1612; --surface:#10201A; --ink:#EFEBDF; --muted:#9AA79F; --line:#243730;
+    --deep:#143A2E; --deep-ink:#F2EEE3; --gold:#D9BF86; --gold-soft:#D9BF86; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0B1612; --surface:#10201A; --ink:#EFEBDF; --muted:#9AA79F; --line:#243730;
+  --deep:#143A2E; --deep-ink:#F2EEE3; --gold:#D9BF86; --gold-soft:#D9BF86; color-scheme:dark;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.65 Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;margin:0;letter-spacing:-.01em;line-height:1.05}
+
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:"Cormorant Garamond",serif;font-size:26px;font-weight:600;letter-spacing:.01em}
+.nav ul{display:flex;gap:32px;list-style:none;margin:0;padding:0;font-size:14px;color:var(--muted)}
+.nav ul a:hover{color:var(--ink)}
+.btn{display:inline-block;padding:13px 26px;border-radius:999px;font-weight:600;font-size:14px;transition:transform .2s,background .2s}
+.btn-gold{background:var(--deep);color:var(--deep-ink)}
+.btn-gold:hover{transform:translateY(-2px)}
+.btn-line{border:1px solid var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--bg)}
+
+.hero{padding:96px 0 104px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:72px;align-items:center}
+.hero h1{font-size:clamp(46px,7vw,92px)}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero p{max-width:460px;color:var(--muted);font-size:18px;margin:28px 0 36px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.card{background:var(--deep);color:var(--deep-ink);border-radius:28px;padding:44px 40px;position:relative;box-shadow:0 40px 80px -30px rgba(14,43,34,.55)}
+.card::after{content:"";position:absolute;inset:12px;border:1px solid rgba(217,191,134,.4);border-radius:18px;pointer-events:none}
+.card h3{font-size:30px;font-style:italic;color:var(--gold-soft);margin-bottom:22px}
+.row{display:flex;align-items:baseline;gap:10px;padding:11px 0;font-size:15px}
+.row::after{content:"";order:2;flex:1;border-bottom:1px dotted rgba(242,238,227,.35);transform:translateY(-4px)}
+.row span:first-child{order:1}.row span:last-child{order:3;color:var(--gold-soft);font-size:13px}
+
+.facts{border-block:1px solid var(--line)}
+.facts .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.fact{padding:34px 20px;border-left:1px solid var(--line)}
+.fact:first-child{border-left:0;padding-left:0}
+.fact b{display:block;font:500 40px/1 "Cormorant Garamond",serif;margin-bottom:6px}
+.fact span{font-size:14px;color:var(--muted)}
+
+section{padding:112px 0}
+.head{max-width:560px;margin-bottom:56px}
+.head h2{font-size:clamp(36px,5vw,58px)}
+.head p{color:var(--muted);margin:16px 0 0}
+
+.menu{display:grid;grid-template-columns:repeat(2,1fr);gap:0 80px}
+.group{padding-bottom:36px}
+.group h3{font-size:28px;padding-bottom:12px;border-bottom:1px solid var(--gold);margin-bottom:6px}
+.item{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.item b{font-weight:500}
+.item small{color:var(--gold);font-size:13px;font-weight:600;white-space:nowrap}
+
+.reviews{background:var(--surface);border-block:1px solid var(--line)}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:48px}
+.quotes blockquote{margin:0;font:italic 500 26px/1.3 "Cormorant Garamond",serif}
+.quotes cite{display:block;margin-top:14px;font:400 13px Manrope,sans-serif;color:var(--muted);font-style:normal}
+.summary{margin-top:56px;color:var(--muted);max-width:640px;font-size:15px}
+
+.visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:72px}
+.info dt{font-family:"Cormorant Garamond",serif;font-size:24px;margin-top:28px}
+.info dt:first-child{margin-top:0}
+.info dd{margin:4px 0 0;color:var(--muted)}
+.big{background:var(--deep);color:var(--deep-ink);border-radius:28px;padding:48px 40px;display:flex;flex-direction:column;justify-content:space-between;gap:36px}
+.big h3{font-size:40px}
+.big p{margin:12px 0 0;color:rgba(242,238,227,.75)}
+.big .btn{background:var(--gold-soft);color:#0E2B22;text-align:center}
+
+.stars{font-size:24px;letter-spacing:3px;line-height:1;background:linear-gradient(90deg,var(--gold) 82%,var(--line) 82%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.rate{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:40px}
+.rate b{font:500 56px/1 "Cormorant Garamond",serif}
+.rate small{display:block;font-size:13px;color:var(--muted);margin-top:6px}
+.gbadge{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;border:1px solid var(--line);border-radius:24px;padding:32px 36px;background:var(--bg);margin-bottom:56px}
+.gbadge .score{font:500 88px/1 "Cormorant Garamond",serif}
+.gbadge .meta{display:flex;flex-direction:column;gap:10px}
+.gbadge .meta span{color:var(--muted);font-size:14px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.chips li{list-style:none;border:1px solid var(--gold);color:var(--ink);border-radius:999px;padding:7px 16px;font-size:14px}
+.rev{background:var(--bg);border:1px solid var(--line);border-radius:22px;padding:30px}
+.rev .stars{font-size:16px;margin-bottom:14px}
+.rev .who{display:flex;align-items:center;gap:12px;margin-top:18px;font-size:13px;color:var(--muted)}
+.rev .av{width:34px;height:34px;border-radius:50%;background:var(--deep);color:var(--deep-ink);display:grid;place-items:center;font:600 13px Manrope,sans-serif}
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.revcta{margin-top:48px;display:flex;gap:14px;flex-wrap:wrap}
+@media (max-width:860px){.revs{grid-template-columns:1fr}.gbadge{grid-template-columns:1fr;padding:28px}.gbadge .score{font-size:72px}}
+footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+@media (max-width:860px){
+  .nav ul{display:none}
+  .hero{padding:56px 0 72px}
+  .hero .wrap,.visit .wrap,.menu,.quotes{grid-template-columns:1fr}
+  .hero .wrap{gap:48px}.menu{gap:0}.quotes{gap:36px}.visit .wrap{gap:48px}
+  .facts .wrap{grid-template-columns:1fr 1fr}
+  .fact:nth-child(3){border-left:0;padding-left:0}
+  .fact:nth-child(n+3){border-top:1px solid var(--line)}
+  section{padding:80px 0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top">The Cafe Chennai</a>
+    <ul>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+    <a class="btn btn-gold" href="https://www.swiggy.com/restaurants/the-cafe-chennai-kancheepuram-selaiyur-chennai-211609" target="_blank" rel="noopener">Order online</a>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+  <div>
+    <h1>Pure vegetarian, <em>served</em> in minutes.</h1>
+    <p>South Indian tiffin, crisp dosas and street-side chaat, made fresh in Selaiyur and priced for every day.</p>
+    <div class="cta">
+      <a class="btn btn-gold" href="#menu">View the menu</a>
+      <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&query=The+Cafe+Chennai+Camp+Rd+Selaiyur+Tambaram" target="_blank" rel="noopener">Get directions</a>
+    </div>
+    <div class="rate"><b>4.1</b><div><div class="stars" role="img" aria-label="Rated 4.1 out of 5">★★★★★</div><small>736 reviews on Google</small></div></div>
+  </div>
+  <aside class="card" aria-label="Popular dishes">
+    <h3>Most ordered</h3>
+    <div class="row"><span>Onion Rava Dosa</span><span>Popular</span></div>
+    <div class="row"><span>Mini Tiffin</span><span>Popular</span></div>
+    <div class="row"><span>Paneer 65</span><span>Popular</span></div>
+    <div class="row"><span>Pav Bhaji</span><span>Popular</span></div>
+    <div class="row"><span>Veg Kothu Parotta</span><span>Popular</span></div>
+    <div class="row"><span>Mini Meals</span><span>Popular</span></div>
+  </aside>
+</div></div>
+
+<div class="facts"><div class="wrap">
+  <div class="fact"><b>4.1</b><span>from 736 Google reviews</span></div>
+  <div class="fact"><b>₹1–200</b><span>per person</span></div>
+  <div class="fact"><b>100%</b><span>vegetarian menu</span></div>
+  <div class="fact"><b>10 pm</b><span>open until, daily service</span></div>
+</div></div>
+
+<section id="menu"><div class="wrap">
+  <div class="head"><h2>A menu built around the tawa.</h2><p>Dosas, idlis and meals for the morning rush, chaat and parotta for the evening.</p></div>
+  <div class="menu">
+    <div class="group"><h3>Tiffin &amp; dosa</h3>
+      <div class="item"><b>Plain Dosa</b><small>Popular</small></div>
+      <div class="item"><b>Onion Rava Dosa</b><small>Popular</small></div>
+      <div class="item"><b>Rava Masala Dosa</b><small>Popular</small></div>
+      <div class="item"><b>Idli Sambar</b></div>
+      <div class="item"><b>Mini Tiffin</b><small>Popular</small></div>
+    </div>
+    <div class="group"><h3>Meals &amp; mains</h3>
+      <div class="item"><b>Mini Meals</b><small>Popular</small></div>
+      <div class="item"><b>Veg Kothu Parotta</b><small>Popular</small></div>
+      <div class="item"><b>Paneer 65</b><small>Popular</small></div>
+      <div class="item"><b>Channa Masala</b></div>
+    </div>
+    <div class="group"><h3>Chaat &amp; snacks</h3>
+      <div class="item"><b>Pav Bhaji</b><small>Popular</small></div>
+      <div class="item"><b>Pani Puri, 8 pieces</b></div>
+      <div class="item"><b>Pani Puri Pav Bhaji</b></div>
+    </div>
+    <div class="group"><h3>Beverages</h3>
+      <div class="item"><b>Tea</b></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="reviews" class="reviews"><div class="wrap">
+  <div class="head"><h2>Loved on Google.</h2></div>
+  <div class="gbadge">
+    <div class="score">4.1</div>
+    <div class="meta">
+      <div class="stars" role="img" aria-label="Rated 4.1 out of 5">★★★★★</div>
+      <span>Based on 736 Google reviews</span>
+      <ul class="chips" style="padding:0;margin:6px 0 0">
+        <li>Assorted pure veg menu</li><li>Friendly staff</li><li>Polite, very fast service</li>
+      </ul>
+    </div>
+  </div>
+  <div class="revs">
+    <div class="rev"><div class="stars">★★★★★</div><blockquote style="margin:0;font:italic 500 24px/1.3 'Cormorant Garamond',serif">“Tasty sambar and chutney, great service and good ambience.”</blockquote><div class="who"><span class="av">G</span>Google review</div></div>
+    <div class="rev"><div class="stars">★★★★☆</div><blockquote style="margin:0;font:italic 500 24px/1.3 'Cormorant Garamond',serif">“Decent food, place is small, service is fast.”</blockquote><div class="who"><span class="av">G</span>Google review</div></div>
+    <div class="rev"><div class="stars">★★★★★</div><blockquote style="margin:0;font:italic 500 24px/1.3 'Cormorant Garamond',serif">“Ordered veg noodles, fried rice, veg kothu parotta and veg kuruma.”</blockquote><div class="who"><span class="av">G</span>Google review</div></div>
+  </div>
+  <div class="revcta">
+    <a class="btn btn-gold" href="https://www.google.com/maps/search/?api=1&query=The+Cafe+Chennai+Camp+Rd+Selaiyur+Tambaram" target="_blank" rel="noopener">Read all reviews on Google</a>
+    <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&query=The+Cafe+Chennai+Camp+Rd+Selaiyur+Tambaram" target="_blank" rel="noopener">Rate us on Google</a>
+  </div>
+</div></section>
+
+<section id="visit" class="visit"><div class="wrap">
+  <div>
+    <div class="head"><h2>Come hungry.</h2></div>
+    <dl class="info">
+      <dt>Address</dt><dd>11, Camp Road, Ezhil Nagar, Selaiyur, Tambaram, Tamil Nadu 600073</dd>
+      <dt>Hours</dt><dd>Open today, closes at 10 pm</dd>
+      <dt>Phone</dt><dd><a href="tel:+9108939607607">089396 07607</a></dd>
+      <dt>Good to know</dt><dd>Walk-ins only, no reservations. Takeaway and online delivery available.</dd>
+    </dl>
+  </div>
+  <div class="big">
+    <div><h3>Too comfortable to leave the house?</h3><p>Get the same dosas and chaat delivered through Swiggy.</p></div>
+    <a class="btn" href="https://www.swiggy.com/restaurants/the-cafe-chennai-kancheepuram-selaiyur-chennai-211609" target="_blank" rel="noopener">Order online</a>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>© The Cafe Chennai, Selaiyur</span><span>Pure vegetarian. Fast, friendly service.</span></div></footer>
+</body>
+</html>
